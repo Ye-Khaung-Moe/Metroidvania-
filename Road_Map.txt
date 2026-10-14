@@ -1,0 +1,21 @@
+Metroidvania Forge 
+
+ ch1 Core Player mechanics 
+ch2  World Building Foundation 
+ch3 World Game Systems 
+ch4 Advance player mechanics
+ch5 Enemies and ai
+ch6 First Boss Fight 
+ch7 Polish, Optimization and Release 
+
+Player Mechanics 
+
+1/player scene with basic movement and collision
+2/player state machine
+3/Basic states - idle and running 
+4/platforming stat - Jump & fall
+5/Advanced platforming 
+6/Crouch 
+7/Sprite and animation 
+8/Dynamic Jump & Fall animation 
+

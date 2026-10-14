@@ -1,10 +1,44 @@
 [gd_scene format=3 uid="uid://b270y60t5afyc"]
 
-[ext_resource type="Texture2D" uid="uid://dukxccvsmgrmv" path="res://icon.svg" id="1_rupst"]
+[ext_resource type="PackedScene" uid="uid://dd0te187ig2kn" path="res://player/player.tscn" id="1_rupst"]
 
-[node name="Node2D" type="Node2D" unique_id=552482179]
+[sub_resource type="Gradient" id="Gradient_wt17y"]
+offsets = PackedFloat32Array(0, 0.9939759, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.06626506, 0.06626506, 0.06626506, 1, 1, 1, 1, 1)
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=629034741]
-position = Vector2(262, 137)
-scale = Vector2(0.296875, 0.2890625)
-texture = ExtResource("1_rupst")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ho087"]
+gradient = SubResource("Gradient_wt17y")
+width = 32
+height = 32
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfvc8"]
+size = Vector2(33, 32)
+
+[node name="Playground" type="Node2D" unique_id=552482179]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1443296904]
+position = Vector2(241.75002, 271)
+scale = Vector2(15.453126, 0.625)
+texture = SubResource("GradientTexture2D_ho087")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=1156282274]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1722475292]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_tfvc8")
+
+[node name="Player" parent="Sprite2D" unique_id=959542541 instance=ExtResource("1_rupst")]
+position = Vector2(-10.402428, -67.20001)
+scale = Vector2(0.064711824, 1.5999999)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=563880718]
+position = Vector2(2, 148)
+scale = Vector2(0.9765634, 8)
+texture = SubResource("GradientTexture2D_ho087")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D2" unique_id=102051499]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/StaticBody2D" unique_id=374325241]
+position = Vector2(-0.49999994, 0)
+scale = Vector2(0.9999999, 1)
+shape = SubResource("RectangleShape2D_tfvc8")
